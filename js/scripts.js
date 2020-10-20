@@ -1,9 +1,18 @@
-let myName = 'Bob';
-document.write(myName + '<br>');
-myName = 'John Doe';
-document.write(myName + '<br>');
+let pokemonList = [
+  {
+    name: "Charmander",
+    type: "fire",
+    height: "2\'"
+  },
 
-alert('Hello world');
+  {
+    name: "Squirtle",
+    type: "water",
+    height: "1\'8\""
+  }
 
-let favoriteFood = 'Pizza';
-document.write(favoriteFood);
+
+
+]
+
+document.write(pokemonList[1].height)
