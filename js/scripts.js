@@ -11,7 +11,11 @@ let pokemonList = [
     height: "1\'8\""
   }
 
-
+  {
+    name: "Bulbasaur",
+    type: "grass",
+    height: "2\'4\""
+  }
 
 ]
 
