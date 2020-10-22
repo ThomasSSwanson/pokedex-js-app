@@ -1,3 +1,4 @@
+// SETTING INITIAL LIST TO PULL FROM WILL LATER USE API
 let pokemonList = [
   {name: 'Bulbasaur',
   height: 0.7,
@@ -37,11 +38,14 @@ let pokemonList = [
 }
 ]
 
+// FOR LOOP TO DOCUMENT.WRITE TO INDEX.HTML DEPENDING ON POKEMON HEIGHT 
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write("<h2>" + pokemonList[i].name + "</h2><br>" + "<h3>type: </h3>" + pokemonList[i].type + "<br>");
+    // adds different div class name depending on type
+    document.write("<div class='pokemonlist-item-" + pokemonList[i].type[0] + "'><h2>" + pokemonList[i].name + "</h2><br>" + "<h3>type: </h3>" + pokemonList[i].type + "<br>");
+    // check for height
     if (pokemonList[i].height >= 1.5) {
-      document.write("<h3>height: </h3>" + pokemonList[i].height + " Wow that is big!! <br><br>");
+      document.write("<h3>height: </h3>" + pokemonList[i].height + " Wow that is big!! </div>");
     }  else if (pokemonList[i].height < 1.5) {
-      document.write("<h3>height: </h3>" + pokemonList[i].height + "<br><br>")
+      document.write("<h3>height: </h3>" + pokemonList[i].height + "</div>")
     }
 }
