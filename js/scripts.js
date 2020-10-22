@@ -44,7 +44,7 @@ for (let i = 0; i < pokemonList.length; i++) {
     document.write("<div class='pokemonlist-item-" + pokemonList[i].type[0] + "'><h2>" + pokemonList[i].name + "</h2><br>" + "<h3>type: </h3>" + pokemonList[i].type + "<br>");
     // check for height
     if (pokemonList[i].height >= 1.5) {
-      document.write("<h3>height: </h3>" + pokemonList[i].height + " Wow that is big!! </div>");
+      document.write("<h3>height: </h3>" + pokemonList[i].height + " - Wow that is big!! </div>");
     }  else if (pokemonList[i].height < 1.5) {
       document.write("<h3>height: </h3>" + pokemonList[i].height + "</div>")
     }
