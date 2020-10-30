@@ -41,7 +41,7 @@ body {
     "head head"
     "nav  main"
     "nav  foot";
-  grid-template-rows: 150px 1fr 30px;
+  grid-template-rows: 150px 1fr 50px;
   grid-template-columns: 400px 1fr;
   margin: 0;
   padding: 0;
@@ -87,11 +87,16 @@ body {
 
 .page-header {
   grid-area: head;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid rgb(75, 75, 75);
+  background-image: linear-gradient(
+      rgba(255, 0, 0, 0.897),
+      rgba(0, 0, 0, 0.801)
+    ),
+    url(../img/dot-grid.png);
 }
 
 .page-header__logo {
-  padding-left: 20px;
+  padding-left: 70px;
   width: 260px;
   height: auto;
 }
@@ -109,6 +114,19 @@ body {
   background-image: url(../img/dark-honeycomb.png);
   overflow: auto;
 }
+
+/* MAIN DISPLAY */
+
+.main-display {
+  grid-area: main;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.897),
+      rgba(0, 255, 0, 0.486)
+    ),
+    url(../img/palm-leaf.png);
+}
+
+/* SCROLLBAR */
 
 ::-webkit-scrollbar {
   width: 20px;
@@ -144,6 +162,16 @@ body {
 
 .pokemonlist-item-normal h2 {
   border-bottom: 1px solid #000;
+}
+
+/* FOOTER */
+
+footer {
+  grid-area: foot;
+  background-color: rgb(34, 34, 34);
+  border: 1px solid rgb(75, 75, 75);
+  border-bottom: none;
+  border-right: none;
 }
 
 /* KEYFRAMES */
