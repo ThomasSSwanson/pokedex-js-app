@@ -1,3 +1,12 @@
+:root {
+  --background: #e5ffb3;
+  --background-accent: #dbf8a3;
+  --background-accent-2: #bde66e;
+  --light: #92de34;
+  --dark: #69bc22;
+  --text: #000;
+}
+
 /* GENERAL STYLINGS */
 
 h2,
@@ -21,44 +30,99 @@ body {
 
 body {
   font-family: "Grandstander", cursive;
-  background-image: url(../img/pikachu-background.jpg);
-  background-size: 100% 100%;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.6;
-  color: #090707;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+  color: #000;
   position: relative;
   min-height: 100%;
+  display: grid;
+  grid-template-areas:
+    "head head"
+    "nav  main"
+    "nav  foot";
+  grid-template-rows: 150px 1fr 30px;
+  grid-template-columns: 400px 1fr;
+  margin: 0;
+  padding: 0;
+}
+
+/* BUTTONS */
+
+.pokemonlist-item {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid rgba(255, 255, 255, 0.616);
+  background-color: var(--light);
+  width: 100%;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px var(--light) inset;
+  margin-bottom: 5px;
+}
+
+.pokemonlist-item:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    var(--dark) 10% 20%,
+    transparent 20% 30%,
+    var(--dark) 30% 40%,
+    transparent 40% 50%,
+    var(--dark) 50% 60%,
+    transparent 60% 70%,
+    var(--dark) 70% 80%,
+    transparent 80% 90%,
+    var(--dark) 90% 100%
+  );
+  animation: background 3s linear infinite;
 }
 
 /* HEADER */
 
+.page-header {
+  grid-area: head;
+  border-bottom: 2px solid #000;
+}
+
 .page-header__logo {
   padding-left: 20px;
-  width: 300px;
+  width: 260px;
   height: auto;
 }
 /* INDEX */
 
-.index-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  grid-auto-rows: minmax(100px, auto);
-  width: 60%;
-  margin: 0 auto;
-  padding: 40px 0;
+.pokemon-list {
+  list-style: none;
+  width: 90%;
+  padding: 0;
+  margin-left: 5%;
 }
 
-.pokemonlist-item-fire,
-.pokemonlist-item-grass,
-.pokemonlist-item-water,
-.pokemonlist-item-normal {
-  color: #fff;
-  padding: 20px;
-  border: 4px solid #090707;
+.pokemon-list-box {
+  grid-area: nav;
+  background-image: url(../img/dark-honeycomb.png);
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.616);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
 }
 
 .pokemonlist-item-grass {
@@ -80,4 +144,15 @@ body {
 
 .pokemonlist-item-normal h2 {
   border-bottom: 1px solid #000;
+}
+
+/* KEYFRAMES */
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
 }
