@@ -2,8 +2,6 @@
 @media only screen and (max-width: 600px) {
   .page-header__logo {
     width: 40%;
-    margin-left: 30%;
-    padding: 0;
   }
 }
 
@@ -19,20 +17,19 @@
       "space1 main  main main space2"
       "space1 nav nav nav space2"
       "space1 foot foot foot space2";
-    grid-template-rows: 120px 1fr 1fr 40px;
+    grid-template-rows: 120px 2fr 1fr 40px;
     grid-template-columns: 20px 360px 1fr 80px 20px;
     grid-gap: 15px 5px;
   }
 
   .page-header__logo {
     width: 32%;
-    margin-left: 34%;
-    padding: 0;
   }
 
   .main-display-box {
     border: 5px solid #232323;
     border-radius: 5px;
+    height: 97%;
   }
 
   .semiCircle::before {
@@ -51,32 +48,34 @@
 
   body {
     grid-template-rows: 150px 1fr 40px;
-    grid-template-columns: 260px 1fr 20px;
+    grid-template-columns: 340px 1fr 20px;
     grid-gap: 15px 5px;
   }
 
   .page-header__logo {
     width: 30%;
-    margin-left: 35%;
-    padding: 0;
+  }
+
+  .pokemonlist-item {
+    width: 300px;
+    height: 52.5px;
   }
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
   .page-header__logo {
     width: 26%;
-    margin-left: 37%;
-    padding: 0;
   }
 
   .main-display-box {
     border: 5px solid #232323;
     border-radius: 5px;
+    height: 97%;
   }
 
   body {
     grid-template-rows: 150px 1fr 40px;
-    grid-template-columns: 260px 1fr 20px;
+    grid-template-columns: 450px 1fr 20px;
     grid-gap: 15px 5px;
   }
 }
@@ -84,13 +83,11 @@
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .page-header__logo {
     width: 22%;
-    margin-left: 36%;
-    padding: 0;
   }
 
   body {
     grid-template-rows: 150px 1fr 40px;
-    grid-template-columns: 260px 1fr 20px;
+    grid-template-columns: 450px 1fr 20px;
     grid-gap: 15px 5px;
   }
 }
