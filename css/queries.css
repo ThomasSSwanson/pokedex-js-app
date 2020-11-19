@@ -53,7 +53,7 @@
   }
 
   .page-header__logo {
-    width: 30%;
+    width: 26%;
   }
 
   .pokemonlist-item {
@@ -64,7 +64,7 @@
 
 @media only screen and (min-width: 993px) and (max-width: 1200px) {
   .page-header__logo {
-    width: 26%;
+    width: 24%;
   }
 
   .main-display-box {
@@ -82,7 +82,7 @@
 
 @media only screen and (min-width: 1201px) and (max-width: 1400px) {
   .page-header__logo {
-    width: 22%;
+    width: 20%;
   }
 
   body {

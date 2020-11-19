@@ -11,8 +11,7 @@
 
 /* GENERAL STYLINGS */
 
-h2,
-h3 {
+h2 {
   display: inline;
 }
 
@@ -22,7 +21,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 html,
@@ -100,12 +99,13 @@ body {
 .page-header {
   grid-area: head;
   border-bottom: 7px dashed var(--text);
-  text-align: center;
 }
 
 .page-header__logo {
-  width: 16%;
+  width: 14%;
   height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 /* INDEX */
@@ -202,6 +202,26 @@ footer {
 
 .modal-header {
   text-transform: capitalize;
+}
+
+/* QUICK ABOUT  */
+
+.main-display h3 {
+  margin: 30px;
+}
+
+.main-display p {
+  text-align: center;
+  font-size: 28px;
+  line-height: 160%;
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+
+.bellsprout {
+  width: 40%;
+  margin-left: 35%;
+  margin-right: auto;
 }
 
 /* KEYFRAMES */
