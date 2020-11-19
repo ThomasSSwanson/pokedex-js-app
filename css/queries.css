@@ -32,6 +32,10 @@
     height: 97%;
   }
 
+  .semiCircle {
+    border-bottom: 10px solid #232323;
+  }
+
   .semiCircle::before {
     width: 200px;
     height: 200px;
@@ -59,6 +63,10 @@
   .pokemonlist-item {
     width: 300px;
     height: 52.5px;
+  }
+
+  .semiCircle {
+    border-bottom: 10px solid #232323;
   }
 }
 
