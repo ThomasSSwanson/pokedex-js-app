@@ -3,6 +3,11 @@
   .page-header__logo {
     width: 40%;
   }
+
+  .pokemonlist-item {
+    width: 300px;
+    height: 52.5px;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px - 767px) 
@@ -13,12 +18,12 @@
 @media all and (max-width: 750px) {
   body {
     grid-template-areas:
-      "space1 head head head space2"
-      "space1 main  main main space2"
-      "space1 nav nav nav space2"
-      "space1 foot foot foot space2";
+      "space1 head space2"
+      "space1 main  space2"
+      "space1 nav space2"
+      "space1 foot space2";
     grid-template-rows: 120px 2fr 1fr 40px;
-    grid-template-columns: 20px 360px 1fr 80px 20px;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-gap: 15px 5px;
   }
 
@@ -33,12 +38,20 @@
   }
 
   .semiCircle {
-    border-bottom: 10px solid #232323;
+    border-bottom: 5px solid #232323;
   }
 
   .semiCircle::before {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    border: 5px solid #232323;
+  }
+
+  #navbarNav {
+    background-color: #232323;
+    z-index: 999;
+    text-align: center;
+    border: 2px solid #fff;
   }
 }
 
@@ -67,6 +80,13 @@
 
   .semiCircle {
     border-bottom: 10px solid #232323;
+  }
+
+  #navbarNav {
+    background-color: #232323;
+    z-index: 999;
+    text-align: center;
+    border: 2px solid #fff;
   }
 }
 
