@@ -1,0 +1,226 @@
+/* GENERAL STYLINGS */
+
+h2 {
+  display: inline;
+}
+
+h2 {
+  font-size: 34px;
+  border-bottom: 1px solid #fff;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Grandstander", cursive;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #000;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "nav  main side"
+    "foot foot foot";
+  grid-template-rows: 150px 1fr 80px;
+  grid-template-columns: 450px 1fr 80px;
+  grid-gap: 15px 5px;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.01),
+      rgba(0, 0, 0, 0.02)
+    ),
+    url(../img/dark-honeycomb.png);
+}
+
+/* BUTTONS */
+
+.pokemonlist-item {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #dc4537c9;
+  width: 400px;
+  height: 70px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px #000000;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  background-size: 100% 100%;
+  box-shadow: 0 0 0 7px #dc4537c9 inset;
+  margin-bottom: 5px;
+  font-family: "Grandstander", cursive;
+}
+
+.pokemonlist-item:hover {
+  background-image: linear-gradient(
+    145deg,
+    transparent 10%,
+    rgb(255, 255, 255) 10% 20%,
+    transparent 20% 30%,
+    rgb(255, 255, 255) 30% 40%,
+    transparent 40% 50%,
+    rgb(255, 255, 255) 50% 60%,
+    transparent 60% 70%,
+    rgb(255, 255, 255) 70% 80%,
+    transparent 80% 90%,
+    rgb(255, 255, 255) 90% 100%
+  );
+  animation: background 3s linear infinite;
+}
+
+/* HEADER */
+
+.page-header {
+  grid-area: head;
+  border-bottom: 7px dashed rgb(255, 255, 255);
+}
+
+.page-header__logo {
+  width: 14%;
+  height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+/* INDEX */
+
+.pokemon-list {
+  list-style: none;
+  padding: 0 5px;
+}
+
+.pokemon-list-box {
+  grid-area: nav;
+  overflow: auto;
+  justify-self: center;
+  align-items: center;
+}
+
+/* MAIN DISPLAY */
+
+.main-display {
+  grid-area: main;
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 10px #000;
+}
+
+.main-display-box {
+  position: absolute;
+  border: 10px solid #232323;
+  background-color: #fff;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #000;
+  width: 97%;
+  height: 95%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.semiCircle {
+  position: relative;
+  background: #dc4437;
+  height: 50%;
+  border-bottom: 20px solid #232323;
+  box-shadow: inset 0px 0px 30px #000;
+}
+
+.semiCircle::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  z-index: 10;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: #fff;
+  border: 10px solid #232323;
+  transform: translateX(-50%) translateY(50%);
+  bottom: 0px;
+  box-shadow: inset 0px 0px 30px #000;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.555);
+  border-radius: 10px;
+  border: 2px solid #232323;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #006bb860;
+}
+
+/* FOOTER */
+footer {
+  grid-area: foot;
+  width: 100%;
+  height: 100%;
+  border-top: 7px dashed rgb(255, 255, 255);
+}
+
+/* MODAL */
+
+.modal-header {
+  text-transform: capitalize;
+}
+
+/* QUICK ABOUT  */
+
+.main-display h3 {
+  margin: 30px;
+}
+
+.main-display p {
+  text-align: center;
+  font-size: 28px;
+  line-height: 160%;
+  padding: 0 20px;
+  margin-bottom: 0;
+}
+
+.bellsprout {
+  width: 40%;
+  margin-left: 35%;
+  margin-right: auto;
+}
+
+/* KEYFRAMES */
+
+@keyframes background {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
