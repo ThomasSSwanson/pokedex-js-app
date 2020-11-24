@@ -4,7 +4,7 @@ let pokemonRepository = (function () {
 
 
   function add(pokemon) {
-    if (typeof(pokemon) === "object"){
+    if (typeof(pokemon) === 'object'){
       pokemonList.push(pokemon);
     } 
   }
@@ -27,13 +27,13 @@ let pokemonRepository = (function () {
   }
 
   function buttonListener (button, poke) {
-    button.addEventListener('click', function (event) {
+    button.addEventListener('click', function () {
       showDetails(poke);
     });
   }
 
   function addListItem(pokemon) {
-    let pokemonListUL = document.querySelector(".pokemon-list");
+    let pokemonListUL = document.querySelector('.pokemon-list');
     let listItem = document.createElement('li');
     let button = document.createElement('button');
     button.innerText = pokemon.name;
